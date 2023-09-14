@@ -1,5 +1,5 @@
 const Pagination = ({ setCurrentPage, currentPage, totalPage }) => {
-  const pages = [...Array(totalPage)?.keys()].slice(1);
+  const pages = Array.from({ length: totalPage }, (_, index) => index + 1);
   return (
     <div className="text-red">
       {pages?.map((page) => (
